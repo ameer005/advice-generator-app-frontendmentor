@@ -1,0 +1,133 @@
+/* SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98 */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  line-height: 1;
+  min-height: 100vh;
+
+  background-color: hsl(218, 23%, 16%);
+  color: hsl(193, 38%, 86%);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.adice-app {
+  position: relative;
+  background-color: hsl(217, 19%, 24%);
+  max-width: 56rem;
+  /* min-height: 31.5rem; */
+  text-align: center;
+
+  border-radius: 11px;
+  padding: 4.8rem;
+  margin: 2.4rem;
+}
+
+.advicebox {
+  /* width: 46.4rem; */
+  /* height: 14.92rem; */
+  margin-bottom: 3.6rem;
+}
+
+.primary-heading {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: hsl(150, 100%, 66%);
+
+  margin-bottom: 2.8rem;
+}
+
+.adive-text {
+  font-size: 2.8rem;
+  font-weight: 800;
+  line-height: 1.4;
+}
+
+.divider {
+  margin-bottom: 1.4rem;
+}
+
+.divide-img {
+  width: 100%;
+}
+
+.btn-dice {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  border: none;
+  background: none;
+  background-color: hsl(150, 100%, 66%);
+  padding: 1.8rem;
+  border-radius: 50%;
+
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
+.icon-dice {
+  width: 2.4rem;
+}
+
+.btn-dice::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  border-radius: 100%;
+  box-shadow: 0 0 2.5rem 1rem hsla(150, 100%, 66%, 0.467);
+  opacity: 0;
+  transition: opacity 250ms;
+}
+
+.btn-dice:hover {
+  cursor: pointer;
+}
+
+.btn-dice:hover::after {
+  opacity: 1;
+}
+
+/* MEDIA QUERIES */
+
+/* 500px */
+@media (max-width: 31em) {
+  html {
+    font-size: 56.25%;
+  }
+
+  .adive-text {
+    font-size: 2.6rem;
+  }
+}
+
+/* 400px */
+@media (max-width: 25em) {
+  html {
+    font-size: 50%;
+  }
+
+  .adive-text {
+    font-size: 2.5rem;
+  }
+}
