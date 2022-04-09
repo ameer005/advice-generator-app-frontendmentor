@@ -87,6 +87,7 @@ body {
 }
 .icon-dice {
   width: 2.4rem;
+  /* animation: loading 1s ease infinite alternate; */
 }
 
 .btn-dice::after {
@@ -108,6 +109,12 @@ body {
 
 .btn-dice:hover::after {
   opacity: 1;
+}
+
+@keyframes loading {
+  to {
+    transform: rotate(1turn) scale(1.3);
+  }
 }
 
 /* MEDIA QUERIES */

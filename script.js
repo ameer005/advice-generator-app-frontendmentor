@@ -8,6 +8,7 @@ const adviceTextEl = document.querySelector(".adive-text");
 
 // Buttons
 const btnDice = document.querySelector(".btn-dice");
+const iconDice = document.querySelector(".icon-dice ");
 
 // Helper function
 const wait = function (sec) {
@@ -29,6 +30,8 @@ const adviceGenrator = async function () {
 
     // Inserting adive data in html
     adiveBoxContainer.style.display = "none";
+    iconDice.style.animation = "loading .7s ease infinite alternate";
+
     document.querySelector(".divider").style.marginTop = "1.4rem";
     adviceNumberEl.textContent = adviceData.id;
     adviceTextEl.textContent = "“" + adviceData.advice + "”";
@@ -37,10 +40,12 @@ const adviceGenrator = async function () {
 
     // Displaying result after 1 second
     await wait(1);
+    iconDice.style.animation = "none";
     document.querySelector(".divider").style.marginTop = "0rem";
 
     btnDice.style.backgroundColor = "hsl(150, 100%, 66%)";
 
+    // iconDice.removeProperty("animation");
     adiveBoxContainer.style.display = "block";
   } catch (err) {
     // Displaying error
