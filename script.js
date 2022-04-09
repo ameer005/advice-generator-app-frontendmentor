@@ -10,6 +10,19 @@ const adviceTextEl = document.querySelector(".adive-text");
 const btnDice = document.querySelector(".btn-dice");
 const iconDice = document.querySelector(".icon-dice ");
 
+// fix
+function is_touch_enabled() {
+  return (
+    "ontouchstart" in window ||
+    navigator.maxTouchPoints > 0 ||
+    navigator.msMaxTouchPoints > 0
+  );
+}
+
+if (!is_touch_enabled()) {
+  btnDice.classList.add("btn2");
+}
+
 // Helper function
 const wait = function (sec) {
   return new Promise(function (resolve) {

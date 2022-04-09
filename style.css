@@ -90,7 +90,7 @@ body {
   /* animation: loading 1s ease infinite alternate; */
 }
 
-.btn-dice::after {
+/* .btn-dice::after {
   content: "";
   position: absolute;
   top: 0;
@@ -108,6 +108,27 @@ body {
 }
 
 .btn-dice:hover::after {
+  opacity: 1;
+} */
+
+.btn2::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  border-radius: 100%;
+  box-shadow: 0 0 2.5rem 1rem hsla(150, 100%, 66%, 0.467);
+  opacity: 0;
+  transition: opacity 250ms;
+}
+
+.btn2:hover {
+  cursor: pointer;
+}
+
+.btn2:hover::after {
   opacity: 1;
 }
 
